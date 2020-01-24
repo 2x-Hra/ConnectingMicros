@@ -8,6 +8,12 @@ ser.write(b'hello')
                                                                                                                                                                                                                                                                                                                                                                                                
 while(True):
 
-    print(ser.read(2))
-
+    temp = str(ser.read(2))
+    temp_list = list(temp)
+    temp_list.pop(1)
+    temp_list.pop(len(temp_list)-1)
+    temp_list.pop(0)
+    # print(temp_list)
+    print(''.join(temp_list))
+    
 
