@@ -6,7 +6,7 @@ ser = serial.Serial(port= 'COM2', baudrate=9600)
 print(ser.name)
 while(True):
 
-    temp = input("000 Or MOTOR speed :")
+    temp = input("000f Or MOTOR speed :")
     ser.write(str.encode(temp))
     if(temp == "000f"):
         temp_analog = str(ser.read(2))
